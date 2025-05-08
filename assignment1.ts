@@ -25,3 +25,19 @@
 //     else
 //       return value*2;
 // }
+
+interface Product {
+    name: string;
+    price: number;
+  }
+  
+  function getMostExpensiveProduct(products: Product[]): Product | null{
+    let maxProduct=products[0];
+    for(const product of products){
+        if(product.price>maxProduct.price)
+            maxProduct=product
+    }
+    return maxProduct;
+  }
+
+  
