@@ -14,7 +14,7 @@
 // function concatenateArrays<T>(...arrays: T[][]): T[]{
 //     const result = ([] as T[]).concat(...arrays);
 //     return(result);
-    
+
 // }
 
 // 
@@ -26,18 +26,33 @@
 //       return value*2;
 // }
 
-interface Product {
-    name: string;
-    price: number;
-  }
-  
-  function getMostExpensiveProduct(products: Product[]): Product | null{
-    let maxProduct=products[0];
-    for(const product of products){
-        if(product.price>maxProduct.price)
-            maxProduct=product
-    }
-    return maxProduct;
-  }
+// interface Product {
+//     name: string;
+//     price: number;
+//   }
 
-  
+//   function getMostExpensiveProduct(products: Product[]): Product | null{
+//     let maxProduct=products[0];
+//     for(const product of products){
+//         if(product.price>maxProduct.price)
+//             maxProduct=product
+//     }
+//     return maxProduct;
+//   }
+
+enum Day {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
+}
+
+function getDayType(day: Day): string {
+    if (day == 5 || day == 6)
+        return ("Weekend")
+    else
+        return ("Weekday")
+}
